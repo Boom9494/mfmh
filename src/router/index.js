@@ -1,23 +1,69 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
+import home from '../views/home'
+import chcartoon from '../views/chcartoon'
+import zixun from '../views/zixun'
+import jpcartoon from '../views/jpcartoon'
+import login from '../views/login'
+import my from '../views/my'
+import register from '../views/register'
+import search from '../views/search'
+import special from '../views/special'
+import update from '../views/update'
+import paslogin from '../views/paslogin'
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/home',
+    component: home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/chcartoon',
+    component: chcartoon
+  },
+  {
+    path: '/zixun',
+    component: zixun
+  },
+  {
+    path: '/login',
+    component: login
+  },
+  {
+    path: '/my',
+    component: my
+  },
+  {
+    path: '/jpcartoon',
+    component: jpcartoon
+  },
+  {
+    path: '/register',
+    component: register
+  },
+  {
+    path: '/search',
+    component: search
+  },
+  {
+    path: '/special',
+    component: special
+  },
+  {
+    path: '/update',
+    component: update
+  },
+  {
+    path: '/paslogin',
+    component: paslogin
+  },
+  {
+    path: '*',
+    redirect: '/home'
   }
+
 ]
 
 const router = new VueRouter({
